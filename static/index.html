@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>级联选择</title>
+    <link rel="stylesheet" href="./css/city_select.css" type="text/css"/>
+</head>
+<body>
+    <div class="selector_box" id="selector_box">
+        <div class="nav_box" id="nav_box">
+
+        </div>
+        <div class="panel_box" id="panel_box">
+
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src='./js/city_select.js'></script>
+    <script src='./js/request.js'></script>
+    <script src='./js/api.js'></script>
+
+    <script>
+        window.onload = function(){
+            
+            const selector_config = {
+                nav_height:36,    
+            }
+            /**
+                实例化选择器  
+                第一个参数：整个选择器盒子id,
+                第二个参数：导航条id, 
+                第三个参数：导航面板id, 
+                第四个参数：选择器默认配置项
+            **/ 
+            let city_selector = new initSelector('#selector_box','#nav_box','#panel_box',selector_config);
+           
+            // 自定义请求参数以及接口
+            city_selector.getOptions = function(){
+                const options = {
+                    url:Api.getProvince,
+                    data:{
+                        parentID:this.currentEleParentId,  // 父id
+                        level:this.currentLevel,  //层级  省/市/县
+                    }
+                }
+
+                return options;
+            }
+            // 监听导航更新回调
+            city_selector.onClickfn =  function(item){
+                console.log('导航更新了',item)
+            }
+        }
+    </script>
+</body>
+</html>

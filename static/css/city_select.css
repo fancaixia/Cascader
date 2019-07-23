@@ -1,0 +1,73 @@
+
+*{
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-decoration: none;
+    box-sizing:border-box;
+    font-size:12px;
+    user-select: none;
+}
+.selector_box{
+    overflow: hidden;
+    margin:20px;
+}
+.panel_box, .nav_box{
+    border:1px solid #ddd;
+    border-radius: 6px;
+}
+.text_placeholder{
+    line-height: 28px;
+    color: #ccc;
+}
+/* 导航头设置 */
+.nav_box{
+    padding: 4px 10px 4px 44px;
+    color:#32B16C;
+    background: url('../image/home.png') no-repeat 10px 6px;
+    cursor: pointer;
+}
+.nav_box li{
+    float:left;
+    line-height: 28px;
+    font-size: 14px;
+    position: relative;
+    margin-right: 20px;
+}
+.nav_box li::after{
+    position: absolute;
+    right:-10px;
+    content:'/';
+}
+
+.panel_box li:last-child::after, .nav_box li:last-child::after{
+    content: '';
+}
+
+/* 导航面板设置 */
+.panel_box{
+    margin-top: 4px;
+    padding: 10px;
+    overflow: hidden;
+}
+.panel_box li{
+    line-height: 24px;
+    float: left;
+    margin-right: 40px;
+    position: relative;
+    color:#333;
+}
+.panel_box li.current{
+    color: #32B16C;
+}
+.panel_box li::after{
+    position: absolute;
+    right:-10px;
+    content:'|';
+    color: #ddd;
+}
+
+.panel_box li:hover{
+    color: #32B16C;
+    cursor: pointer;
+}
