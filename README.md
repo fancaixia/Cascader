@@ -234,14 +234,14 @@ function selectorHandle(selector_box,nav_box,panel_box,options){
 - 访问 [http://localhost:8080/](http://localhost:8080/)
 ##### 代码结构
 >Cascader
->>router  -- 模拟数据库查询数据
->>server.js    -- node根目录 配置文件
->>nodemon.json  -- 修改文件自动编译
->>static  -- 前台页面文件
->>>index.html   
->>>css
->>>image
->>>js
+>>router  -- 模拟数据库查询数据 <br/>
+>>server.js    -- node根目录 配置文件 <br/>
+>>nodemon.json  -- 修改文件自动编译 <br/>
+>>static  -- 前台页面文件 <br/>
+>>>index.html   <br/>
+>>>css  <br/>
+>>>image  <br/>
+>>>js  <br/>
 >>>>api.js   --  接口地址 <br/>
 >>>>jquery-3.3.1.js  --  Jquery 文件 <br/>
 >>>>request.js  --  ajax封装 <br/>
