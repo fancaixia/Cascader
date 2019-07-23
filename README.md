@@ -242,7 +242,7 @@ function selectorHandle(selector_box,nav_box,panel_box,options){
 >>>css
 >>>image
 >>>js
->>>>api.js   --  接口地址 
->>>>jquery-3.3.1.js  --  Jquery 文件
->>>>request.js  --  ajax封装
->>>>city_select.js   -- 自定义文件 
+>>>>api.js   --  接口地址 <br/>
+>>>>jquery-3.3.1.js  --  Jquery 文件 <br/>
+>>>>request.js  --  ajax封装 <br/>
+>>>>city_select.js   -- 自定义文件 <br/>
