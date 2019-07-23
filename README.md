@@ -1,7 +1,8 @@
 # js_Cascader
 基于jQuery 的级联选择小插件
 ![https://github.com/fancaixia/js_Cascader/blob/master/pic/city_select.png](https://github.com/fancaixia/js_Cascader/blob/master/pic/city_select.png)
-#####html
+<br/><br/>
+##### html
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +65,7 @@
 </body>
 </html>
 ```
-#####city_select.js
+##### city_select.js
 ```
 // 初始化功能
 function initSelector(selector_box,nav_box,panel_box,options){
@@ -223,9 +224,9 @@ function selectorHandle(selector_box,nav_box,panel_box,options){
 }
 ```
 ##### 实现思路
->点击导航空白处:  弹出面板并显示根目录数据
->点击导航某个元素: 弹出面板并显示同级数据
->点击面板元素: 触发回调事件（页面传入）, 更新导航,更新面板为子元素（没有子则关闭面板）
+>点击导航空白处:  弹出面板并显示根目录数据 <br/>
+>点击导航某个元素: 弹出面板并显示同级数据 <br/>
+>点击面板元素: 触发回调事件（页面传入）, 更新导航,更新面板为子元素（没有子则关闭面板）<br/>
 ##### 案例演示
 - npm install -g nodemon
 - npm / cnpm install
@@ -241,7 +242,7 @@ function selectorHandle(selector_box,nav_box,panel_box,options){
 >>>css
 >>>image
 >>>js
->>>>api.js   --  接口地址
-jquery-3.3.1.js  --  Jquery 文件
-request.js  --  ajax封装
-city_select.js   -- 自定义文件 
+>>>>api.js   --  接口地址 
+>>>>jquery-3.3.1.js  --  Jquery 文件
+>>>>request.js  --  ajax封装
+>>>>city_select.js   -- 自定义文件 
