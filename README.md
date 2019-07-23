@@ -1,7 +1,30 @@
-# js_Cascader
-基于jQuery 的级联选择小插件
+### 基于jQuery 的级联选择小插件
 ![https://github.com/fancaixia/js_Cascader/blob/master/pic/city_select.png](https://github.com/fancaixia/js_Cascader/blob/master/pic/city_select.png)
 <br/><br/>
+##### 实现思路
+>点击导航空白处:  弹出面板并显示根目录数据 <br/>
+>点击导航某个元素: 弹出面板并显示同级数据 <br/>
+>点击面板元素: 触发回调事件（页面传入）, 更新导航,更新面板为子元素（没有子则关闭面板）<br/>
+##### 案例演示
+- npm install -g nodemon
+- npm / cnpm install
+- npm run dev
+- 访问 [http://localhost:8080/](http://localhost:8080/)
+##### 代码结构
+>Cascader
+>>router  -- 模拟数据库查询数据 <br/>
+>>server.js    -- node根目录 配置文件 <br/>
+>>nodemon.json  -- 修改文件自动编译 <br/>
+>>static  -- 前台页面文件 <br/>
+>>>index.html   <br/>
+>>>css  <br/>
+>>>image  <br/>
+>>>js  <br/>
+>>>>api.js   --  接口地址 <br/>
+>>>>jquery-3.3.1.js  --  Jquery 文件 <br/>
+>>>>request.js  --  ajax封装 <br/>
+>>>>city_select.js   -- 自定义文件 <br/>
+
 ##### html
 ```
 <!DOCTYPE html>
@@ -223,26 +246,4 @@ function selectorHandle(selector_box,nav_box,panel_box,options){
     
 }
 ```
-##### 实现思路
->点击导航空白处:  弹出面板并显示根目录数据 <br/>
->点击导航某个元素: 弹出面板并显示同级数据 <br/>
->点击面板元素: 触发回调事件（页面传入）, 更新导航,更新面板为子元素（没有子则关闭面板）<br/>
-##### 案例演示
-- npm install -g nodemon
-- npm / cnpm install
-- npm run dev
-- 访问 [http://localhost:8080/](http://localhost:8080/)
-##### 代码结构
->Cascader
->>router  -- 模拟数据库查询数据 <br/>
->>server.js    -- node根目录 配置文件 <br/>
->>nodemon.json  -- 修改文件自动编译 <br/>
->>static  -- 前台页面文件 <br/>
->>>index.html   <br/>
->>>css  <br/>
->>>image  <br/>
->>>js  <br/>
->>>>api.js   --  接口地址 <br/>
->>>>jquery-3.3.1.js  --  Jquery 文件 <br/>
->>>>request.js  --  ajax封装 <br/>
->>>>city_select.js   -- 自定义文件 <br/>
+
